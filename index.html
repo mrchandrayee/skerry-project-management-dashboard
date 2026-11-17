@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10191c"><title>skerry — Project Management</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="app" id="app">
+<aside class="sidebar" id="sidebar">
+ <div class="side-brand"><div class="brand-symbol">⌁</div><b>skerry</b><button id="railToggle" title="Collapse sidebar">◧</button></div>
+ <div class="side-scroll">
+  <p class="nav-caption">MENU</p>
+  <nav class="side-nav">
+   <button class="nav-link active" data-page="dashboard"><span class="nav-icon">▦</span><span>Dashboard</span></button>
+   <button class="nav-link" data-page="projects"><span class="nav-icon">⬡</span><span>Projects</span><i class="nav-count">9</i></button>
+   <button class="nav-link" data-page="tasks"><span class="nav-icon">▤</span><span>Tasks</span><i class="nav-count">3</i></button>
+   <button class="nav-link" data-page="calendar"><span class="nav-icon">▢</span><span>Calendar</span></button>
+   <button class="nav-link" data-page="analytics"><span class="nav-icon">⌁</span><span>Analytics</span></button>
+   <button class="nav-link" data-page="team"><span class="nav-icon">♧</span><span>Team</span></button>
+  </nav>
+  <p class="nav-caption general">GENERAL</p>
+  <nav class="side-nav">
+   <button class="nav-link" data-page="settings"><span class="nav-icon">⚙</span><span>Settings</span></button>
+   <button class="nav-link" data-page="help"><span class="nav-icon">ⓘ</span><span>Help</span></button>
+   <button class="nav-link" id="logout"><span class="nav-icon">↪</span><span>Logout</span></button>
+  </nav>
+ </div>
+ <div class="sidebar-bottom"><div class="plan-icon">✦</div><div><b>Pro workspace</b><small>12 of 20 seats used</small></div><button title="Workspace options">···</button></div>
+</aside>
+<div class="main-frame" id="mainFrame">
+ <header class="topbar">
+  <label class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Search task, project..."><kbd>⌘ K</kbd></label>
+  <div class="top-actions"><button class="icon-btn" id="searchBtn" title="Search">⌕</button><button class="icon-btn" id="themeBtn" title="Toggle theme">☼</button><button class="icon-btn" id="mailBtn" title="Messages">✉</button><button class="icon-btn notification" id="notifyBtn" title="Notifications">♧<i></i></button><div class="profile"><div class="avatar">IB</div><div><b>Inês Barros</b><small>ines@tidewater.works</small></div></div></div>
+ </header>
+ <main class="content" id="content"></main>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal hidden" id="modal"><div class="modal-card"><button class="modal-x" id="modalX">×</button><div id="modalBody"></div></div></div>
+<script src="app.js"></script></body></html>
